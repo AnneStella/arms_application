@@ -1,0 +1,30 @@
+{% load static from staticfiles %}
+<head>
+    <script type="text/javascript">
+             var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+            </script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <meta charset="UTF-8">
+    <title>ARMS INTERNSHIP 2019</title>
+</head>
+<body>
+<nav class="red lighten-2">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url  'admin:index'%}">Admin</a></li>
+        <li><a href="{% url 'my_app:apply' %}">Apply now!</a></li>
+    </ul>
+</nav>
+
+ <div>
+     {% block content %}
+
+     {% endblock %}
+ </div>
+
+</body>

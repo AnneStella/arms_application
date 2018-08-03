@@ -1,0 +1,134 @@
+{#{% extends 'base.html' %}#}
+{% load staticfiles %}
+<head xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin|Palanquin+Dark|Quicksand" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>APPLY NOW</title>
+</head>
+
+
+<body>
+<div>
+    <div style="text-align:center; background-color:lightgrey; font-family: Quicksand; font-size: 20px;">
+        {% if applied %}
+            <h2 style="text-align: center;color: #686de0;">Thank you for applying!</h2>
+        {% else %}
+
+
+            <h2 class="center-align "> Apply here</h2>
+
+            <h3 class="center-align">Please fill out this form with all the required fields.</h3>
+
+
+            {#        <form enctype="multipart/form-data" method="POST" class="col s3 center-align" action="">#}
+            {#        <div class="center-align">#}
+            {#            {% csrf_token %}#}
+            {##}
+            {#            <div class="row">#}
+            {#                <div class="input-field col s6">#}
+            {#                    <label class="active" for="first_name2">First Name</label>#}
+            {#                    <input id="first_name2" type="text" class="validate" name="{{ form.first_name.html_name }}">#}
+            {#                </div>#}
+            {#            </div>#}
+            {#            </br>#}
+            {#            <div class="row" >#}
+            {#            <div class="input-field col s6">#}
+            {#                <label class="active" for="last_name2">last Name</label>#}
+            {#                <input id="last_name2" type="text" class="validate" name="{{ form.last_name.html_name }}">#}
+            {#            </div>#}
+            {#            </div>#}
+            {##}
+            {#            <div class="row" >#}
+            {#                <div class="input-field col s6">#}
+            {#                    <label class="active" for="telephone_number">Telephone number</label>#}
+            {#                    <input id="first_name3" type="number" class="validate" name="{{ form.telephone_name.html_name }}">#}
+            {##}
+            {#                </div>#}
+            {#            </div>#}
+            {##}
+            {#            <div class="row">#}
+            {#                <div class="input-field col s6">#}
+            {#                    <label class="active" for="university">University</label>#}
+            {#                    <input id="first_name4" type="text" class="validate" name="{{ form.university.html_name }}"><br>#}
+            {#                </div>#}
+            {#            </div>#}
+            {##}
+            {#            </br>#}
+            {##}
+            {#            <div class="row">#}
+            {#                <div class="input-field col s6">#}
+            {#                    <label for="course">Course</label>#}
+            {#                    <span class="helper-text" data-error="wrong"#}
+            {#                          data-success="left">(E.g B sci.Electrical Engineering)</span>#}
+            {#                    <input id="first_name5" type="text" class="validate" name="{{ form.course.html_name }}">#}
+            {#                </div>#}
+            {#            </div>#}
+            {##}
+            {#            </br>#}
+            {##}
+            {#            <div class="row">#}
+            {#                <div class="input-field col s6">#}
+            {#                    <label class="active" for="address">Address(home/Study)</label>#}
+            {#                    <input id="address" type="text" class="validate" name="{{ form.address.html_name }}">#}
+            {#                </div>#}
+            {#            </div>#}
+            {##}
+            {#            </br>#}
+            {##}
+            {##}
+            {#        <div class="row">#}
+            {#                <div class="input-field col s6">#}
+            {#                    <label#}
+            {#                            for="textarea2"><p>Briefly write about what inspires you to apply for this kind of internship program.(Max 100 words)</p>#}
+            {#                    </label>#}
+            {#                    <textarea id="textarea2" class="materialize-textarea" data-length="150" name="{{ form.essay.html_name }}"></textarea>#}
+            {#                </div>#}
+            {#            </div>#}
+            {##}
+            {#        <div class="row">#}
+            {#            <div class="file-field input-field col s6">#}
+            {#                <div class="btn">#}
+            {#                    <span>Add files</span>#}
+            {#                    <input type="file" multiple>#}
+            {#                </div>#}
+            {#                <div class="file-path-wrapper">#}
+            {#                    <input class="file-path validate" type="text" placeholder="Upload Resume(pdf,doc,.docx)">#}
+            {#                </div>#}
+            {#            </div>#}
+            {#        </div>#}
+            {#         <div class="row">#}
+            {#            <div class="file-field input-field col s6">#}
+            {#                <div class="btn">#}
+            {#                    <span>Add files</span>#}
+            {#                    <input type="file" multiple>#}
+            {#                </div>#}
+            {#                <div class="file-path-wrapper">#}
+            {#                    <input class="file-path validate" type="text" placeholder="Upload cover letter(pdf,doc,.docx)">#}
+            {#                </div>#}
+            {#            </div>#}
+            {#        </div>#}
+            {##}
+            {##}
+            {#            <div class="file-path-wrapper center-align">#}
+            {#                <button type="submit" name="_submit" class="btn">Submit</button>#}
+            {#            </div>#}
+            {#</div>#}
+            {#        </form>#}
+            {##}
+
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br>
+                <input type="submit" value="SUBMIT" class="center-align">
+            </form>
+
+        {% endif %}
+    </div>
+</div>
+
+{#{% endblock %}#}
+</body>

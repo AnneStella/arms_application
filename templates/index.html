@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+     {% block content %}
+</head>
+<div><div class="card-panel #f9fbe7 lime lighten-5">
+<div><h1 class="center-align">A.R.M.S INTERNSHIP 2019</h1>
+<span><div class="center-align ">
+    <img class="image-section__image js-photo-zoom" src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" srcset="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940 1x, https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940 2x" alt="Group Hand Fist Bump" data-zoom-src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" data-pin-media="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=500&amp;w=250">
+{#    <img class="image-section__image js-photo-zoom" src="https://images.pexels.com/photos/1122403/pexels-photo-1122403.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" srcset="https://images.pexels.com/photos/1122403/pexels-photo-1122403.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940 1x, https://images.pexels.com/photos/1122403/pexels-photo-1122403.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940 2x" alt="Five Person Holding Hands Together" data-zoom-src="https://images.pexels.com/photos/1122403/pexels-photo-1122403.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" data-pin-media="https://images.pexels.com/photos/1122403/pexels-photo-1122403.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=500&amp;w=250">#}
+{#    <img class="rg_ic rg_i" id="CoxOuxoBSG4XWM:" jsaction="load:str.tbn" alt="Image result for arms logo" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" src="data:image/png;base64,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" style="width: 200px;>#}
+{#    class="irc_mi" src="https://cdn2.vectorstock.com/i/1000x1000/99/76/open-arms-and-hands-logo-vector-1749976.jpg" alt="Image result for open arms logo" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="300" height="225" style="margin-top: 0px; margin-bottom: 0px;">#}
+</div>
+</div>
+     <div class="container "  style="font-family: sans-serif " >
+     <p>The ARMS Project is a premier Web Systems Engineering research and development entity, actively promoting systematic, disciplined and quantifiable approaches toward successful development of high-quality and ubiquitous web systems.
+          The ARMS Project is nurturing Patrons for Eloquent and Rational Application of Contemporary Methodologies, Tools, Techniques and Guidelines to Meet Unique Requirements of Web Information Systems for Higher Education Institutions and E-Government amongst others.
+          It is no secret that the strength of any worthy organization comes from within. For a respected Higher Education Institution this implies the demonstration of self sustenance, the ability to overcome challenges in-house, and a proven track record of innovation.
+          All the preceding three elements are embodied within the framework of the ARMS Project, an ongoing initiative at the "<a href="http://cedat.mak.ac.ug/">College of Engineering Design Art and Technology".</a>
+            For more information check out the ARMS website:<a href="https://cedat.mak.ac.ug/research/arms/">ARMS Project Makerere</a>. The ARMS internship program is the rel deal for all souls interested in programming. Please apply  for the next intake that begins this June-2019.
+      </p>
+
+
+         <div class="">
+            <div class="col s12 m4">
+              <div class="card blue-grey lighten-2">
+                <div class="card-content white-text">
+                  <span class="card-title">Anne Stella</span>
+                  <p>"ARMS is an enriching and exciting experience and I am so grateful of the administrators.
+                      I am convenient because I require little markup to use effectively."</p>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.facebook.com/">Facebook</a>
+                </div>
+              </div>
+            </div>
+          </div>
+         <span><div class="">
+            <div class="col s12 m4">
+              <div class="card blue-grey lighten-2">
+                <div class="card-content white-text">
+                  <span class="card-title">Njolima Concepta</span>
+                  <p>"ARMS is an enriching and exciting experience and I am so grateful of the administrators.
+                      It is the best place to be. I am glad to be one of the few people who enrolled within it."</p>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.instagram.com/">Instagram</a>
+                </div>
+              </div>
+            </div>
+          </div></span>
+         <h5>Benefits of the internship</h5>
+         <p> The ARMS internship grants you the opportunities to have a feel of most programming and styling languages which include:Python, HTML,CSS,Javascript and other software applications that are
+         that are applied in the world. The Interns gain the confidence and are better  after the internship. For more benefits, endeavour to hit the Apply Now button on our page. All the best.</p>
+         <div class="center-align">
+         <a class="waves-effect waves-light btn"  href="{% url 'my_app:apply' %}" >APPLY NOW</a>
+
+         </div>
+
+            </div>
+          </div>
+        </div>
+       <footer class="page-footer red lighten-2">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s16">
+                <h5 class="blue-text">About Us</h5>
+                <p class="grey-text text-lighten-4">For more information, check out our various pages that are listed.ARMS together we can make this happen. Thank you for checking out our page.</p>
+              </div>
+              <div class="col l4 offset-l2 s16">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.twitter.com/">Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.pinterest.com/">Pinterest</a></li>
+                  <li><a class="grey-text text-lighten-3" href=https://www.linkedin.com/">LinkedIn</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">ARMS internship 2019</a>
+            </div>
+          </div>
+        </footer>
+
+
+       {% endblock %}
+
+
+
+
+
+</body>
+</html>
